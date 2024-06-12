@@ -1,0 +1,144 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "linux-musl"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  TaskID         BigInt    @id(map: "PK_Task") @default(autoincrement())
+  AssignedUserID BigInt
+  StatusID       BigInt
+  PriorityID     BigInt
+  SeverityID     BigInt
+  ActivityID     BigInt?
+  TaskCode       String    @db.VarChar(50)
+  Title          String    @db.VarChar(50)
+  Description    String?   @db.VarChar(500)
+  StartDate      DateTime  @db.Timestamp(6)
+  EndDate        DateTime  @db.Timestamp(6)
+  Risk           String?   @db.VarChar(50)
+  Impediment     String?   @db.VarChar(50)
+  CreatedUserID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedBy      String?  
+  DeletedDate    DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID  BigInt?
+  TaskDependency String?   @db.VarChar(100)
+  CreatedUser    User      @relation("CreatedUser", fields: [CreatedUserID], references: [UserID])
+  DeletedUser    User?     @relation("DeletedUser", fields: [DeletedUserID], references: [UserID])
+
+  Priority Priority @relation(fields: [PriorityID], references: [PriorityID])
+  Severity Severity @relation(fields: [SeverityID], references: [SeverityID])
+  Status   Status   @relation(fields: [StatusID], references: [StatusID])
+}
+
+model User {
+  UserID          BigInt    @id(map: "PK_User") @default(autoincrement())
+  UserPhoneNumber BigInt?
+  UserName        String    @db.VarChar(50)
+  UserEmail       String?   @db.VarChar(50)
+  CreatedUserID   BigInt
+  CreatedBy       String    @db.VarChar(150)
+  CreatedDate     DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID  BigInt?
+  ModifiedBy      String?   @db.VarChar(150)
+  ModifiedDate    DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted       Boolean   @default(false)
+  DeletedBy       String?
+  DeletedDate     DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID   BigInt?
+
+  CreatedTask     Task[]     @relation("CreatedUser")
+  DeletedTask     Task[]     @relation("DeletedUser")
+  CreatedStatus   Status[]   @relation("CreatedUser")
+  DeletedStatus   Status[]   @relation("DeletedUser")
+  CreatedPriority Priority[] @relation("CreatedUser")
+  DeletedPriority Priority[] @relation("DeletedUser")
+  CreatedSeverity Severity[] @relation("CreatedUser")
+  DeletedSeverity Severity[] @relation("DeletedUser")
+  CreatedActivity Activity[] @relation("CreatedUser")
+  DeletedActivity Activity[] @relation("DeletedUser")
+}
+
+model Status {
+  StatusID       BigInt    @id(map: "PK_Status") @default(autoincrement())
+  StatusName     String    @db.VarChar(50)
+  CreatedUserID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedBy      String?
+  DeletedDate    DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID  BigInt?
+  CreatedUser    User      @relation("CreatedUser", fields: [CreatedUserID], references: [UserID])
+  DeletedUser    User?     @relation("DeletedUser", fields: [DeletedUserID], references: [UserID])
+
+  Task Task[]
+}
+
+model Priority {
+  PriorityID     BigInt    @id(map: "PK_Priority") @default(autoincrement())
+  PriorityName   String    @db.VarChar(50)
+  CreatedUserID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedBy      String?
+  DeletedDate    DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID  BigInt?
+  CreatedUser    User      @relation("CreatedUser", fields: [CreatedUserID], references: [UserID])
+  DeletedUser    User?     @relation("DeletedUser", fields: [DeletedUserID], references: [UserID])
+
+  Task Task[]
+}
+
+model Severity {
+  SeverityID     BigInt    @id(map: "PK_Severity") @default(autoincrement())
+  SeverityName   String    @db.VarChar(50)
+  CreatedUserID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedBy      String?
+  DeletedDate    DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID  BigInt?
+  CreatedUser    User      @relation("CreatedUser", fields: [CreatedUserID], references: [UserID])
+  DeletedUser    User?     @relation("DeletedUser", fields: [DeletedUserID], references: [UserID])
+
+  Task Task[]
+}
+
+model Activity {
+  ActivityID     BigInt    @id(map: "PK_Activity") @default(autoincrement())
+  ActivityName   String    @db.VarChar(50)
+  CreatedUserID  BigInt
+  CreatedBy      String    @db.VarChar(150)
+  CreatedDate    DateTime  @default(now()) @db.Timestamp(6)
+  ModifiedUserID BigInt?
+  ModifiedBy     String?   @db.VarChar(150)
+  ModifiedDate   DateTime? @default(now()) @db.Timestamp(6)
+  IsDeleted      Boolean   @default(false)
+  DeletedBy      String?
+  DeletedDate    DateTime? @default(now()) @db.Timestamp(6)
+  DeletedUserID  BigInt?
+  CreatedUser    User      @relation("CreatedUser", fields: [CreatedUserID], references: [UserID])
+  DeletedUser    User?     @relation("DeletedUser", fields: [DeletedUserID], references: [UserID])
+}

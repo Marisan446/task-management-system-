@@ -1,0 +1,59 @@
+{
+    "tms.api.rest.dataacces.activity.create.v1":{
+        "data":{
+            "ActivityID":1,
+            "ActivityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK].activity has been created successfully"
+    },
+    "tms.api.rest.dataacces.activity.read.v1":{
+        "data":{
+            "ActivityID":1,
+            "ActivityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK].activity has been created successfully"
+    },
+    "tms.api.rest.dataacces.activity.readone.v1":{
+        "data":{
+            "ActivityID":1,
+            "ActivityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK].activity has been created successfully"
+    },
+    "tms.api.rest.dataaccess.activity.update.v1": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK].activity has been updated successfully"
+    },
+    "tms.api.rest.dataaccess.activity.deleteone.v1": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK].activity has been deleted successfully"
+    }
+}
+

@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true,
+        "jest":true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+        {
+            "files": [
+                "**/logger.js"
+            ],
+            "rules": {
+                "no-console": ["error", { "allow": ["error"] }]
+            }
+        } 
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        // "no-mixed-spaces-and-tabs": 0,
+        // "no-console": ["error", { "allow": ["error"] }],
+        // "no-unused-vars": 0, 
+        // "indent": [
+        //     "error",
+        //     "tab"
+        // ],
+        // "linebreak-style": [
+        //     "error",
+        //     "windows"
+        // ],
+        // "quotes": [
+        //     "error",
+        //     "double"
+        // ],
+        // "semi": [
+        //     "error",
+        //     "always"
+        // ]
+    }
+}

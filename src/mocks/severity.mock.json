@@ -1,0 +1,51 @@
+{
+    "tms.api.rest.dataaccess.severity.create.v1":{
+        "data":{
+            "SeverityID":1,
+            "SeverityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataacces.severity.read.v1":{
+        "data":{
+            "SeverityID":1,
+            "SeverityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataacces.severity.readone.v1":{
+        "data":{
+            "SeverityID":1,
+            "SeverityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataaccess.severity.update.v1": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK] priority has been updated successfully"
+    }
+}

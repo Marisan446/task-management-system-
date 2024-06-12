@@ -1,0 +1,83 @@
+{
+    "tms.api.rest.dataaccess.task.create.v1":{
+        "data":{
+            "TaskID":1,
+            "AssignedUserID":1,
+            "StatusID":1,
+            "PriorityID":1 ,  
+            "SeverityID":1,     
+            "ActivityID" :1,
+            "TaskCode":1,
+            "Title":"create task",
+            "StartDate": "2024-05-29T05:52:40.864Z",
+            "EndDate":"2024-06-29T05:52:40:864Z",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+            
+        },
+        "Task":200,
+        "message":"[MOCK] Task has been created successfully"
+    },
+    "tms.api.rest.dataaccess.task.read.v1":{
+        "data":{
+            "TaskID":1,
+            "TaskCode":1,
+            "Title":"create task",
+            "StartDate": "2024-05-29T05:52:40.864Z",
+            "EndDate":"2024-06-29T05:52:40:864Z",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "Task":200,
+        "message":"[MOCK] Task has been readed successfully"
+    },
+    "tms.api.rest.dataaccess.task.readone.v1":{
+        "data":{
+            "TaskID":1,
+            "TaskCode":1,
+            "Title":"create task",
+            "StartDate": "2024-05-29T05:52:40.864Z",
+            "EndDate":"2024-06-29T05:52:40:864Z",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "Task":200,
+        "message":"[MOCK] Task has been readone successfully"
+    },
+    "tms.api.rest.dataaccess.task.update.v1":{
+       "data":{
+        "count":1
+       },
+       "Task":200,
+       "message":"[MOCK] Task has been updated successfully"
+    },
+    "tms.api.rest.dataaccess.task.delete.v1":{
+        "data":{
+            "TaskID":1,
+            "TaskCode":1,
+            "Title":"create task",
+            "StartDate": "2024-05-29T05:52:40.864Z",
+            "EndDate":"2024-06-29T05:52:40:864Z",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] Task has been updated successfully"
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "tms.api.rest.dataacces.priority.create.v1":{
+        "data":{
+            "PriorityID":1,
+            "PriorityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataacces.priority.read.v1":{
+        "data":{
+            "PriorityID":1,
+            "PriorityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataacces.priority.readone.v1":{
+        "data":{
+            "PriorityID":1,
+            "PriorityName":"Sample",
+            "CreatedUserID":1,
+            "CreatedBy":"user1",
+            "CreatedDate":"2024-05-29T05:52:40.864Z",
+            "ModifiedUserID":1,
+            "ModifiedBy":"user1",
+            "ModifiedDate":"2024-05-29T05:52:40.864Z"
+        },
+        "status":200,
+        "message":"[MOCK] priority has been created successfully"
+    },
+    "tms.api.rest.dataaccess.priority.update.v1": {
+        "data": {
+            "count": 1
+        },
+        "status": 200,
+        "message": "[MOCK] priority has been updated successfully"
+    }
+}
+
